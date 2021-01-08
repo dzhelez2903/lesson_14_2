@@ -68,6 +68,9 @@ html {
     .product_card__container__stars_list__items {
       display: inline-block;
       list-style: none;
+      font-size: 0;
+      margin-left: 0rem;
+      width: 12px;
     }
 
     .product_card__container__text__label__radio {
