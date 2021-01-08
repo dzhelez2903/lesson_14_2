@@ -23,46 +23,51 @@ html {
     grid-template-rows: 19.5% 61% 19.5%;
     gap: 0px 0px;
     grid-template-areas:
-    "head head head head head"
-    ". picture . text ."
-    "bottom bottom bottom bottom bottom";
+      "head head head head head"
+      ". picture . text ."
+      "bottom bottom bottom bottom bottom";
     background-color: #111a28;
     box-shadow: 0rem 0rem 65rem 0rem rgba(0, 0, 0, 0.82);
     border-radius: 1rem;
     width: 86%;
     height: 39rem;
   }
-  .product_card__container__head { grid-area: head;
+
+  .product_card__container__head {
+    grid-area: head;
     padding-left: 2.2rem;
     padding-top: 2.5rem;
   }
-  .product_card__container__picture { grid-area: picture; }
+
+  .product_card__container__picture {
+    grid-area: picture;
+  }
+
   .product_card__container__text {
     grid-area: text;
+
     h1 {
       font-family: "Museo Sans Rounded";
       font-size: 2.4rem;
       color: #e1e1e1;
       line-height: 1.2;
     }
+
     p {
       font-family: "Museo Sans Rounded";
       font-size: 1.4rem;
       color: #e1e1e1;
-      margin-top: 2rem;
-      margin-bottom: 2.5rem;
+      margin-top: 1.5rem;
+      margin-bottom: 1.5rem;
     }
 
     .product_card__container__stars_list {
-      margin-bottom: 2.5rem;
+      margin-bottom: 2rem;
     }
 
     .product_card__container__stars_list__items {
       display: inline-block;
       list-style: none;
-    }
-
-    .product_card__container__text__label {
     }
 
     .product_card__container__text__label__radio {
@@ -88,7 +93,7 @@ html {
       transition: 0.2s;
     }
 
-    .product_card__container__text__label__radio:checked + .product_card__container__text__label__span_fake::after {
+    .product_card__container__text__label__radio:checked+.product_card__container__text__label__span_fake::after {
       opacity: 1;
     }
 
@@ -99,6 +104,10 @@ html {
       position: relative;
       left: -55%;
       bottom: -20%;
+    }
+
+    .product_card__container__selected {
+      display: inline-block;
     }
 
     .product_card__container__selected__select {
@@ -115,12 +124,33 @@ html {
         color: black;
       }
     }
+
     .product_card__container__selected__select:hover {
       cursor: pointer;
     }
+
+    .product_card__container__btn {
+      max-width: 18.2rem;
+      max-height: 3.8rem;
+      border: 0.1rem solid #4f5560;
+      padding: 0.9rem 5.3rem;
+      margin-top: 3rem;
+      background-color: transparent;
+      font-family: "Museo Sans Rounded";
+      font-size: 1.4rem;
+      color: #e1e1e1;
+      outline: none !important;
+    }
+
+    .product_card__container__btn:hover {
+      cursor: pointer;
+      font-weight: 600;
+      border: 0.2rem solid #4f5560;
+      transition: 0.2s;
+    }
   }
-  .bottom { grid-area: bottom; }
+
+  .bottom {
+    grid-area: bottom;
+  }
 }
-
-
-

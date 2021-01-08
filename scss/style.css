@@ -7,61 +7,89 @@ html {
   font-weight: normal;
   src: url("../fonts/MuseoSansRounded-100.woff") format("woff");
 }
+
 .product_card {
   margin: 0 auto;
   max-width: 80rem;
   height: 60rem;
   background: url("../img/bgd.jpg") no-repeat center;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
+
 .product_card .product_card__container {
+  display: -ms-grid;
   display: grid;
-  grid-template-columns: 6.5% 48% 12% 27% 6.5%;
-  grid-template-rows: 19.5% 61% 19.5%;
+  -ms-grid-columns: 6.5% 48% 12% 27% 6.5%;
+      grid-template-columns: 6.5% 48% 12% 27% 6.5%;
+  -ms-grid-rows: 19.5% 61% 19.5%;
+      grid-template-rows: 19.5% 61% 19.5%;
   gap: 0px 0px;
-  grid-template-areas: "head head head head head" ". picture . text ." "bottom bottom bottom bottom bottom";
+      grid-template-areas: "head head head head head" ". picture . text ." "bottom bottom bottom bottom bottom";
   background-color: #111a28;
-  box-shadow: 0rem 0rem 65rem 0rem rgba(0, 0, 0, 0.82);
+  -webkit-box-shadow: 0rem 0rem 65rem 0rem rgba(0, 0, 0, 0.82);
+          box-shadow: 0rem 0rem 65rem 0rem rgba(0, 0, 0, 0.82);
   border-radius: 1rem;
   width: 86%;
   height: 39rem;
 }
+
 .product_card .product_card__container__head {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 5;
   grid-area: head;
   padding-left: 2.2rem;
   padding-top: 2.5rem;
 }
+
 .product_card .product_card__container__picture {
+  -ms-grid-row: 2;
+  -ms-grid-column: 2;
   grid-area: picture;
 }
+
 .product_card .product_card__container__text {
+  -ms-grid-row: 2;
+  -ms-grid-column: 4;
   grid-area: text;
 }
+
 .product_card .product_card__container__text h1 {
   font-family: "Museo Sans Rounded";
   font-size: 2.4rem;
   color: #e1e1e1;
   line-height: 1.2;
 }
+
 .product_card .product_card__container__text p {
   font-family: "Museo Sans Rounded";
   font-size: 1.4rem;
   color: #e1e1e1;
-  margin-top: 2rem;
-  margin-bottom: 2.5rem;
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
 }
+
 .product_card .product_card__container__text .product_card__container__stars_list {
-  margin-bottom: 2.5rem;
+  margin-bottom: 2rem;
 }
+
 .product_card .product_card__container__text .product_card__container__stars_list__items {
   display: inline-block;
   list-style: none;
 }
+
 .product_card .product_card__container__text .product_card__container__text__label__radio {
   display: none;
 }
+
 .product_card .product_card__container__text .product_card__container__text__label__span_fake {
   display: inline-block;
   width: 1.2rem;
@@ -69,6 +97,7 @@ html {
   background: url("../img/not_checked.png");
   position: relative;
 }
+
 .product_card .product_card__container__text .product_card__container__text__label__span_fake::after {
   content: "";
   position: absolute;
@@ -77,11 +106,14 @@ html {
   height: 1.2rem;
   background: url("../img/checked.png");
   opacity: 0;
+  -webkit-transition: 0.2s;
   transition: 0.2s;
 }
+
 .product_card .product_card__container__text .product_card__container__text__label__radio:checked + .product_card__container__text__label__span_fake::after {
   opacity: 1;
 }
+
 .product_card .product_card__container__text .product_card__container__text__label__span {
   display: inline-block;
   width: 1.2rem;
@@ -90,6 +122,11 @@ html {
   left: -55%;
   bottom: -20%;
 }
+
+.product_card .product_card__container__text .product_card__container__selected {
+  display: inline-block;
+}
+
 .product_card .product_card__container__text .product_card__container__selected__select {
   width: 6.7rem;
   height: 3.1rem;
@@ -100,14 +137,40 @@ html {
   color: #e1e1e1;
   font-size: 1.4rem;
 }
+
 .product_card .product_card__container__text .product_card__container__selected__select option {
   color: black;
 }
+
 .product_card .product_card__container__text .product_card__container__selected__select:hover {
   cursor: pointer;
 }
-.product_card .bottom {
-  grid-area: bottom;
+
+.product_card .product_card__container__text .product_card__container__btn {
+  max-width: 18.2rem;
+  max-height: 3.8rem;
+  border: 0.1rem solid #4f5560;
+  padding: 0.9rem 5.3rem;
+  margin-top: 3rem;
+  background-color: transparent;
+  font-family: "Museo Sans Rounded";
+  font-size: 1.4rem;
+  color: #e1e1e1;
+  outline: none !important;
 }
 
+.product_card .product_card__container__text .product_card__container__btn:hover {
+  cursor: pointer;
+  font-weight: 600;
+  border: 0.2rem solid #4f5560;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+}
+
+.product_card .bottom {
+  -ms-grid-row: 3;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 5;
+  grid-area: bottom;
+}
 /*# sourceMappingURL=style.css.map */
