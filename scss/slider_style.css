@@ -1,5 +1,10 @@
 /*slider styls*/
 
+
+.product_card__container__slider {
+  grid-area: slider;
+}
+
 .product_card__container__slider {
   margin-top: 6.5rem;
 }

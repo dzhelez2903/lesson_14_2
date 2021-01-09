@@ -50,12 +50,6 @@ html {
   padding-top: 2.5rem;
 }
 
-.product_card .product_card__container__slider {
-  -ms-grid-row: 2;
-  -ms-grid-column: 2;
-  grid-area: slider;
-}
-
 .product_card .product_card__container__text {
   -ms-grid-row: 2;
   -ms-grid-column: 4;
