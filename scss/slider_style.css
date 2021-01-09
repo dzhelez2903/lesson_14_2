@@ -1,39 +1,51 @@
+/*slider styls*/
+
 .product_card__container__slider {
   margin-top: 6.5rem;
 }
 
-.product_card__container__slider .slick-list {
+.slick-list {
+  display: flex;
   overflow: hidden;
 }
 
-.product_card__container__slider .slick-track {
+.slick-track {
   display: flex;
 }
 
-.product_card__container__slider .slick-arrow {
-  z-index: -1;
-  position: absolute;
-}
-
-.product_card__container__slider .slick-dots {
+.slick-dots {
   display: flex;
   justify-content: center;
-  margin-right: 0.2rem;
 }
 
-.product_card__container__slider .slick-dots li {
-  list-style: none;
+.slick-dots li {
   margin-top: 3rem;
 }
 
-.product_card__container__slider .slick-dots li button {
+.slick-dots button {
+  width: 0.8rem;
+  height: 0.8rem;
   font-size: 0;
-  text-decoration: none;
-  width: 1rem;
-  height: 1.5rem;
+  border: none;
   border-radius: 50%;
+  padding: 0;
+  cursor: pointer;
+  display: block;
 }
 
-.button :nth-child(2) {
-  background-color: black;
+.slick-dots li:nth-child(2) {
+  margin-left: 0.5rem;
+}
+
+.slick-dots :nth-child(3) {
+  margin-left: 0.5rem;
+}
+
+.slick-dots :nth-child(4) {
+  margin-left: 0.5rem;
+}
+
+.slick-dots li.slick-active {
+  border: 0.15rem solid grey;
+  border-radius: 50%;
 }
