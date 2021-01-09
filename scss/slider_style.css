@@ -20,6 +20,7 @@
 
 .slick-dots li {
   margin-top: 3rem;
+  list-style: none;
 }
 
 .slick-dots button {
@@ -29,23 +30,40 @@
   border: none;
   border-radius: 50%;
   padding: 0;
-  cursor: pointer;
   display: block;
+  background-color: aqua;
 }
 
-.slick-dots li:nth-child(2) {
+.slick-dots button:hover {
+  width: 1rem;
+  height: 1rem;
+  cursor: pointer;
+}
+
+.slick-dots button {
+  font-size: 0;
+  padding: 0;
+}
+
+.slick-dots li:nth-child(1) button {
+  background-color: #181a1b;
+  border: 1px solid #7b8188;
+}
+
+.slick-dots li:nth-child(2) button {
+  background-color: #fff;
   margin-left: 0.5rem;
+  border: 1px solid #7b8188;
 }
 
-.slick-dots :nth-child(3) {
+.slick-dots li:nth-child(3) button {
+  background-color: #ed3333;
   margin-left: 0.5rem;
+  border: 1px solid #7b8188;
 }
 
-.slick-dots :nth-child(4) {
+.slick-dots li:nth-child(4) button {
+  background-color: #636d52;
   margin-left: 0.5rem;
-}
-
-.slick-dots li.slick-active {
-  border: 0.15rem solid grey;
-  border-radius: 50%;
+  border: 1px solid #7b8188;
 }
