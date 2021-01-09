@@ -24,7 +24,7 @@ html {
     gap: 0px 0px;
     grid-template-areas:
       "head head head head head"
-      ". picture . text ."
+      ". slider . text ."
       "bottom bottom bottom bottom bottom";
     background-color: #111a28;
     box-shadow: 0rem 0rem 65rem 0rem rgba(0, 0, 0, 0.82);
@@ -39,8 +39,8 @@ html {
     padding-top: 2.5rem;
   }
 
-  .product_card__container__picture {
-    grid-area: picture;
+  .product_card__container__slider {
+    grid-area: slider;
   }
 
   .product_card__container__text {

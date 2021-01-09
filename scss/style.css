@@ -32,7 +32,7 @@ html {
   -ms-grid-rows: 19.5% 61% 19.5%;
       grid-template-rows: 19.5% 61% 19.5%;
   gap: 0px 0px;
-      grid-template-areas: "head head head head head" ". picture . text ." "bottom bottom bottom bottom bottom";
+      grid-template-areas: "head head head head head" ". slider . text ." "bottom bottom bottom bottom bottom";
   background-color: #111a28;
   -webkit-box-shadow: 0rem 0rem 65rem 0rem rgba(0, 0, 0, 0.82);
           box-shadow: 0rem 0rem 65rem 0rem rgba(0, 0, 0, 0.82);
@@ -50,10 +50,10 @@ html {
   padding-top: 2.5rem;
 }
 
-.product_card .product_card__container__picture {
+.product_card .product_card__container__slider {
   -ms-grid-row: 2;
   -ms-grid-column: 2;
-  grid-area: picture;
+  grid-area: slider;
 }
 
 .product_card .product_card__container__text {
