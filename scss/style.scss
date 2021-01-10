@@ -8,6 +8,8 @@ html {
   src: url("../fonts/MuseoSansRounded-100.woff") format("woff");
 }
 
+/*content structure*/
+
 .product_card {
   margin: 0 auto;
   max-width: 80rem;
@@ -39,6 +41,8 @@ html {
     padding-top: 2.5rem;
   }
 
+  /*text styls*/
+
   .product_card__container__text {
     grid-area: text;
 
@@ -57,56 +61,56 @@ html {
       margin-bottom: 1.5rem;
     }
 
-    .product_card__container__stars_list {
-      margin-bottom: 2rem;
-    }
+    /*rating styls*/
 
-    .product_card__container__stars_list__items {
+    .product_card__container__rating {
       display: inline-block;
-      list-style: none;
-      font-size: 0;
-      margin-left: 0rem;
-      width: 12px;
+      overflow: hidden;
     }
 
-    .product_card__container__text__label__radio {
+    .product_card__container__rating:not(:checked) > input {
       display: none;
     }
 
-    .product_card__container__text__label__span_fake {
-      display: inline-block;
-      width: 1.2rem;
-      height: 1.2rem;
-      background: url("../img/not_checked.png");
+    .product_card__container__rating:not(:checked) > label {
+      float: right;
+      width: 1.4rem;
+      cursor: pointer;
+      font-size: 1.5rem;
+      line-height: 1.5rem;
+      color: #9da1a6;
+    }
+
+    .product_card__container__rating:not(:checked) > label:before {
+      content: "★";
+    }
+
+    .product_card__container__rating > input:checked ~ label {
+      color: #f7bf16;
+    }
+
+    .product_card__container__rating:not(:checked) > label:hover,
+    .product_card__container__rating:not(:checked) > label:hover ~ label {
+      color: #f7bf16;
+    }
+
+    .product_card__container__rating > input:checked + label:hover,
+    .product_card__container__rating > input:checked + label:hover ~ label,
+    .product_card__container__rating > input:checked ~ label:hover,
+    .product_card__container__rating > input:checked ~ label:hover ~ label,
+    .product_card__container__rating > label:hover ~ input:checked ~ label {
+      color: #f7bf16;
+    }
+
+    .product_card__container__rating > label:active {
       position: relative;
     }
 
-    .product_card__container__text__label__span_fake::after {
-      content: "";
-      position: absolute;
-      display: block;
-      width: 1.2rem;
-      height: 1.2rem;
-      background: url("../img/checked.png");
-      opacity: 0;
-      transition: 0.2s;
-    }
-
-    .product_card__container__text__label__radio:checked+.product_card__container__text__label__span_fake::after {
-      opacity: 1;
-    }
-
-    .product_card__container__text__label__span {
-      display: inline-block;
-      width: 1.2rem;
-      height: 1.2rem;
-      position: relative;
-      left: -55%;
-      bottom: -20%;
-    }
+    /*select styls*/
 
     .product_card__container__selected {
       display: inline-block;
+      margin-top: 2.7rem;
     }
 
     .product_card__container__selected__select {
@@ -128,6 +132,8 @@ html {
       cursor: pointer;
     }
 
+    /*button styls*/
+
     .product_card__container__btn {
       max-width: 18.2rem;
       max-height: 3.8rem;
@@ -147,9 +153,5 @@ html {
       border: 0.2rem solid #4f5560;
       transition: 0.2s;
     }
-  }
-
-  .bottom {
-    grid-area: bottom;
   }
 }
