@@ -12,7 +12,7 @@ html {
 
 .product_card {
   margin: 0 auto;
-  max-width: 80rem;
+  min-width: 80rem;
   height: 60rem;
   background: url("../img/bgd.jpg") no-repeat center;
   display: flex;
@@ -31,7 +31,7 @@ html {
     background-color: #111a28;
     box-shadow: 0rem 0rem 65rem 0rem rgba(0, 0, 0, 0.82);
     border-radius: 1rem;
-    width: 86%;
+    max-width: 68.5rem;
     height: 39rem;
   }
 
