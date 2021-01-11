@@ -145,13 +145,13 @@ html {
       font-size: 1.4rem;
       color: #e1e1e1;
       outline: none !important;
+      transition: 0.2s;
     }
 
     .product_card__container__btn:hover {
       cursor: pointer;
       font-weight: 600;
       border: 0.2rem solid #4f5560;
-      transition: 0.2s;
     }
   }
 }
